@@ -1,0 +1,99 @@
+.header { 
+ 	background-color: #fff;
+	transition: 0.3s; 
+	&__content {    
+		padding: 16px 14px 16px 22px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start; 
+		align-items: stretch;
+		max-width: 1800px;
+		margin-left: auto;
+		margin-right: auto; 
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+		@include lg{    
+			padding: 18px 24px 15px 36px;
+		}
+		@include lg {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 10px 70px;
+		}
+		@include xl {
+			padding: 8px 70px;
+		}
+		@include xxl {
+			padding: 8px 6px;
+		}
+	} 
+	&__logo {
+		&__container{
+			 width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include lg{
+				width: auto;
+			}
+		}
+		&__link{
+			display: inline-block;
+		}
+		svg {
+			fill: rgb(0, 0, 0);
+			object-fit: contain;
+			width: 86px;
+			height: auto;
+
+			@include lg {
+				width: 112px;
+			}
+			.first-logo{
+				
+				fill:$blue;
+			}
+			@include lg {
+				width: 120px;
+			}
+		} 
+	}
+	&.nav-open{
+		position: fixed;
+		left: 0;
+		right: 0;
+		background-color: $blue;
+		.header__content{
+			 height: 100vh; 
+		}
+		.header__logo svg{
+			fill:white;
+			.first-logo{
+				fill:#fff;
+			}
+		}
+		@include lg {
+			position: sticky;
+			background-color: #fff;
+			.header__content{
+				height: auto; 
+		   }
+		}
+		.header__logo svg{
+			@include lg {
+			fill:$blue;
+			.first-logo{
+				fill:$blue;
+			}
+		}
+		}
+	}
+}
+
+.fixed-header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+ 

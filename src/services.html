@@ -1,0 +1,56 @@
+@@include('./html-templates/header/header.html' )
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '949150869264755',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v11.0'
+    });
+    FB.api(
+      '/112073617808584',
+      'GET',
+      {"fields":"images"},
+      function(response) {
+          console.log(response);
+      }
+    );
+  };
+</script>
+
+<script>
+</script>
+
+<main class="main">
+  <h1>MDealer</h1>
+  <h2>services</h2>
+
+  <div class="container">
+
+    <div class="tabs">
+      <div class="tabs__container dropdown">
+        <div class='title pointerCursor'>tab1 <i class="fa fa-angle-right">&times;</i></div>
+
+        <div class="tabs__bar hided menu pointerCursor ">
+          <buttom class="tabs__btn option" id='option1' data-for-tab='1'>tab1</buttom>
+          <buttom class="tabs__btn option" id='option2' data-for-tab='2'>tab2</buttom>
+          <buttom class="tabs__btn option" id='option3' data-for-tab='3'>tab3</buttom>
+        </div>
+      </div>
+      <div class="tabs__content" data-tab='1'>content1</div>
+      <div class="tabs__content" data-tab='2'>content2</div>
+      <div class="tabs__content" data-tab='3'>content3</div>
+    </div>
+
+
+
+  </div>
+
+</main>
+
+
+</body>
+
+</html>

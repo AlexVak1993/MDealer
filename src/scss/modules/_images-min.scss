@@ -1,0 +1,14 @@
+
+.figure-webp{
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-bottom: calc(100% * 1); 
+}
+.picture-webp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
